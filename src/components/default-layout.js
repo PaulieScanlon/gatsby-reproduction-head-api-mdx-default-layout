@@ -1,14 +1,24 @@
 import React from 'react';
-import { MDXProvider } from '@mdx-js/react';
+import { graphql } from 'gatsby';
 
-const Layout = ({ children, pageContext }) => {
+const Layout = ({ data: { mdx }, children }) => {
   return (
     <div>
-      <h1>{pageContext.frontmatter.title}</h1>
-      <MDXProvider>{children}</MDXProvider>
+      <h1>{mdx.frontmatter.title}</h1>
+      {children}
     </div>
   );
 };
+
+export const pageQuery = graphql`
+  query ($id: String!) {
+    mdx(id: { eq: $id }) {
+      frontmatter {
+        title
+      }
+    }
+  }
+`;
 
 export default Layout;
 
