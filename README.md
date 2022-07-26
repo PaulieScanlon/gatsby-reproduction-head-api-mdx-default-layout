@@ -9,3 +9,10 @@ Head API \*_does not_ set HTML `<title>` as "Hello World"
 
 `hero-layout.js` is used by "/" and Head API is exported from the MDX.
 Head API **does** set HTML `<title>` as "Reproduction Head API"
+
+also seeing `Head is not defined`
+
+## Links
+
+- [Docs](https://github.com/gatsbyjs/gatsby/blob/feat/mdx-v2-docs/docs/docs/how-to/routing/mdx.md)
+- [Discussion](https://github.com/gatsbyjs/gatsby/discussions/25068)

@@ -9,10 +9,12 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
           frontmatter {
             title
           }
+          internal {
+            contentFilePath
+          }
           parent {
             ... on File {
               name
-              absolutePath
               relativeDirectory
             }
           }
@@ -26,7 +28,9 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
     createPage({
       path: pagePath,
-      component: path.resolve(`src/components/default-layout.js?__contentFilePath=${node.parent.absolutePath}`),
+      component: `${path.resolve(`./src/components/default-layout.js`)}?__contentFilePath=${
+        node.internal.contentFilePath
+      }`,
       context: {
         id: node.id
       }

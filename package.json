@@ -23,8 +23,8 @@
   "homepage": "https://github.com/PaulieScanlon/gatsby-reproduction-head-api-mdx-default-layout#readme",
   "dependencies": {
     "@mdx-js/react": "2.1.2",
-    "gatsby": "4.18.0-mdxv4-rc.65",
-    "gatsby-plugin-mdx": "4.0.0-rc.0",
+    "gatsby": "4.20.0-mdxv4-rc.60",
+    "gatsby-plugin-mdx": "4.0.0-rc.2",
     "gatsby-source-filesystem": "^4.19.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
