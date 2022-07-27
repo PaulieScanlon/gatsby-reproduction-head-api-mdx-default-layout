@@ -22,7 +22,6 @@ export const pageQuery = graphql`
 
 export default Layout;
 
-export function Head() {
-  console.log('///// Head | layout.js');
-  return <title>Hello World</title>;
+export function Head({ pageContext }) {
+  return <title>{pageContext.frontmatter.title}</title>;
 }

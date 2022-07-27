@@ -15,4 +15,5 @@ also seeing `Head is not defined`
 ## Links
 
 - [Docs](https://github.com/gatsbyjs/gatsby/blob/feat/mdx-v2-docs/docs/docs/how-to/routing/mdx.md)
+  - [PR:35893](https://github.com/gatsbyjs/gatsby/pull/35893)
 - [Discussion](https://github.com/gatsbyjs/gatsby/discussions/25068)
