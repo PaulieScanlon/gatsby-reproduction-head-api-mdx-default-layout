@@ -1,11 +1,9 @@
 # gatsby-reproduction-head-api-mdx-default-layout
 
-Reproduction Repo for using Head API with MDX (v1) defaultLayouts
+Reproduction Repo for using Head API with MDX (v2) defaultLayouts
 
-## Test for Head API and `gatsby-plugin-mdx@v1.6.22` / `defaultLayouts`
+## Links
 
-`default-layout.js` is set in the options of the plugin and is used for "/about" and "/using".
-Head API \*_does not_ set HTML `<title>` as "Hello World"
-
-`hero-layout.js` is used by "/" and Head API is exported from the MDX.
-Head API **does** set HTML `<title>` as "Reproduction Head API"
+- [Docs](https://github.com/gatsbyjs/gatsby/blob/feat/mdx-v2-docs/docs/docs/how-to/routing/mdx.md)
+  - [PR:35893](https://github.com/gatsbyjs/gatsby/pull/35893)
+- [Discussion](https://github.com/gatsbyjs/gatsby/discussions/25068)

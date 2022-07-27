@@ -6,14 +6,16 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
       allMdx {
         nodes {
           id
-          fileAbsolutePath
           frontmatter {
             title
           }
+          internal {
+            contentFilePath
+          }
           parent {
             ... on File {
-              relativeDirectory
               name
+              relativeDirectory
             }
           }
         }
@@ -26,10 +28,11 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
     createPage({
       path: pagePath,
-      component: node.fileAbsolutePath,
+      component: `${path.resolve(`./src/components/default-layout.js`)}?__contentFilePath=${
+        node.internal.contentFilePath
+      }`,
       context: {
-        mdxId: node.id,
-        frontmatter: node.frontmatter
+        id: node.id
       }
     });
   });
